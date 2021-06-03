@@ -3,237 +3,239 @@ layout: default
 ---
 
 <div class="row">
-    <p>
-        In recent years, we have witnessed the proliferation of benchmark environments for developing and comparing
-        reinforcement learning algorithms.
-        The suite of tasks includes game environments [<a href="http://arxiv.org/abs/1606.01540">Brokman et al(2016)</a>,
-        <a href="https://jair.org/index.php/jair/article/view/10819">Bellmare et al (2013)</a>,
-        <a href="http://arxiv.org/abs/1901.08129">Perez-Liebana et al (2019)</a>,
-        <a href="https://arxiv.org/abs/1904.10079">Guss et al (2019)</a>, <a href="https://arxiv.org/abs/1708.04782">Vinyals et al (2017)</a>],
-        robotics [<a href="http://arxiv.org/abs/1606.01540">Brokman et al (2016)</a>, <a href="https://arxiv.org/abs/1801.00690">Tassa et al (2018)</a>,
-        <a href="https://arxiv.org/abs/1904.01201">Savva et al (2019)</a>], autonomous driving [<a href="https://arxiv.org/abs/1711.03938">Dosovitskiy et al (2017)</a>,
-        <a href="https://arxiv.org/abs/2104.10133">Ettinger et al (2021)</a>], procedurally generated gridworlds
-        [<a href="https://github.com/maximecb/gym-minigrid">Chevalier-Boisvert et al (2018)</a>, <a href="https://arxiv.org/abs/1912.01588">Cobbe et al (2019)</a>], among many others.
-        While the construction of environments has contributed to showcasing the remarkable potential of reinforcement learning,
-        conceiving tasks without a precise understanding of a relative measure of task complexity will lead the field to
-        the point of diminishing returns. Today, we observe early indications of this problem: performance reports in these
-        tasks are used as a proxy for progress, making it harder to assess if recent advancements in the field are indeed
-        producing better algorithms. Moreover, this practice is unsustainable.
-        The computational cost associated with benchmark evaluations is hurtful to the environment
-        [<a href="https://arxiv.org/abs/1907.10597">Schwartz et al (2019)</a>, <a href="https://arxiv.org/abs/1910.09700">Lacoste et al (2019)</a>],
-        while the disparity of access to computational resources significantly accentuates the breach between large (well-funded)
-        and smaller institutions, impacting the inclusiveness and the diversity in the field [<a href="https://arxiv.org/abs/2011.14826">Obando-Ceron & Castro (2021)</a>].
-    </p>
-    <p>
-        A solution moving forward is to encourage both theoretical and empirical analysis of <b>Complexity Measures for
-        Reinforcement Learning (CM4RL)</b> that produce general, <i>computationally tractable</i> measurements of task
-        complexity for the problem of reinforcement learning.
-        Thus far, the field has primarily relied upon anecdotal assessments of complexity based on human intuitions and <i>viva
-        voce</i> of expert researchers fine-tuning algorithms to benchmarks as the most common tools to judge what problems are worth
-        solving.
-        Today, comparing evaluations among various environments with fundamentally different actions, states, rewards, and
-        dynamics is a seemingly intractable problem. Most prior work has sought to analyze algorithmic rather than task complexity in RL
-        in the form of sample complexity bounds [<a href="https://link.springer.com/article/10.1023/A:1017984413808">Kearns et al
-        (2002)</a>, <a href="https://jmlr.org/papers/volume10/strehl09a/strehl09a.pdf">Strehl et al (2009)</a>,
-        <a href="https://arxiv.org/abs/1510.08906">Dann et al (2015)</a>] or regret bounds [<a href="https://www.jmlr.org/papers/volume11/jaksch10a/jaksch10a.pdf">Jaksch et al, 2010</a>,
-        <a href="https://arxiv.org/abs/1703.05449">Azar et al (2017)</a>, <a href="https://arxiv.org/abs/1807.03765">Jin et
-        al (2018)</a> <a href="https://arxiv.org/abs/2101.02195">Jin et al (2021)</a>].
-        Other works have tackled the analysis of environments [<a href="https://arxiv.org/abs/1610.09512">Jiang et al (2017)</a>,
-        <a href="https://papers.nips.cc/paper/2014/hash/2ab56412b1163ee131e1246da0955bd1-Abstract.html">Maillard et al
-        (2014)</a>], focusing on structural properties of usually finite Markov Decision Processes and a priori knowledge
-        of these quantities.
-        We argue that much work remains to understand the interplay between the different factors that determine the
-        complexity of the reinforcement learning problem and develop actionable metrics that scale to high-dimensional problems
-        commonly seen in modern benchmarks, as some recent work [<a href="https://arxiv.org/abs/2004.07707">Oller et al (2020)</a>,
-        <a href="https://arxiv.org/pdf/2103.12726">Furuta et al (2021)</a>] have started exploring.
-    </p>
-    <p>
-        <ul>
-            This workshop aims to bring together the theory and practice of analyzing task complexity in RL. We welcome research
-            papers that investigate questions such as (but not limited to):
-            <li>How hard is it to solve a task?</li>
-            <li>How can we quantify/order tasks by their complexity?</li>
-            <li>What are actionable metrics of complexity?</li>
-            <li>Are current environments/benchmarks diverse/complex enough?</li>
-            <li>How can we achieve task-agnostic intelligent behaviours?</li>
-        </ul>
-    </p>
-    <p>
-        We encourage submissions that propose computationally tractable approaches to these questions that are relevant to
-        areas including (but not limited to):
-        <ol>
-            <li>Properties and taxonomies of MDPs</li>
-            <li>PAC analysis of RL</li>
-            <li>Information theory in RL</li>
-            <li>RL benchmarks and their meta-analyses</li>
-            <li>Skills Discovery</li>
-            <li>Curriculum learning</li>
-            <li>Continual learning</li>
-            <li>Curiosity, intrinsic motivation and unsupervised RL</li>
-            <li>Representation learning</li>
-            <li>Exploration</li>
-            <li>Human preferences</li>
-            <li>Real-world applications of RL (Robotics, Recommendation, etc.)</li>
-            <li>Novelty search, diversity algorithms, and open-endedness</li>
-        </ol>
-    </p>
-</div>
-
-<div class="row" id="sponsors">
-    <h2>Sponsors</h2>
-    <div class="break"></div>
-    <div>
-        <p>
-
-        </p>
-        <p>Any opinions, findings, and conclusions or recommendations expressed in this material are those of the
-            author(s) and do not necessarily reflect the views of the our sponsors.</p>
+    <div class="accordion" id="content-accordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="header-call-for-papers">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#call-for-papers" aria-expanded="true" aria-controls="call-for-papers">
+            Call For Papers
+          </button>
+        </h2>
+        <div id="call-for-papers" class="accordion-collapse collapse show" aria-labelledby="call-for-papers" data-bs-parent="#content-accordion">
+          <div class="accordion-body">
+             <p>
+                In recent years, we have witnessed the proliferation of benchmark environments for developing and comparing
+                reinforcement learning algorithms.
+                The suite of tasks includes game environments [<a href="http://arxiv.org/abs/1606.01540">Brokman et al(2016)</a>,
+                <a href="https://jair.org/index.php/jair/article/view/10819">Bellmare et al (2013)</a>,
+                <a href="http://arxiv.org/abs/1901.08129">Perez-Liebana et al (2019)</a>,
+                <a href="https://arxiv.org/abs/1904.10079">Guss et al (2019)</a>, <a href="https://arxiv.org/abs/1708.04782">Vinyals et al (2017)</a>],
+                robotics [<a href="http://arxiv.org/abs/1606.01540">Brokman et al (2016)</a>, <a href="https://arxiv.org/abs/1801.00690">Tassa et al (2018)</a>,
+                <a href="https://arxiv.org/abs/1904.01201">Savva et al (2019)</a>], autonomous driving [<a href="https://arxiv.org/abs/1711.03938">Dosovitskiy et al (2017)</a>,
+                <a href="https://arxiv.org/abs/2104.10133">Ettinger et al (2021)</a>], procedurally generated gridworlds
+                [<a href="https://github.com/maximecb/gym-minigrid">Chevalier-Boisvert et al (2018)</a>, <a href="https://arxiv.org/abs/1912.01588">Cobbe et al (2019)</a>], among many others.
+                While the construction of environments has contributed to showcasing the remarkable potential of reinforcement learning,
+                conceiving tasks without a precise understanding of a relative measure of task complexity will lead the field to
+                the point of diminishing returns. Today, we observe early indications of this problem: performance reports in these
+                tasks are used as a proxy for progress, making it harder to assess if recent advancements in the field are indeed
+                producing better algorithms. Moreover, this practice is unsustainable.
+                The computational cost associated with benchmark evaluations is hurtful to the environment
+                [<a href="https://arxiv.org/abs/1907.10597">Schwartz et al (2019)</a>, <a href="https://arxiv.org/abs/1910.09700">Lacoste et al (2019)</a>],
+                while the disparity of access to computational resources significantly accentuates the breach between large (well-funded)
+                and smaller institutions, impacting the inclusiveness and the diversity in the field [<a href="https://arxiv.org/abs/2011.14826">Obando-Ceron & Castro (2021)</a>].
+            </p>
+            <p>
+                A solution moving forward is to encourage both theoretical and empirical analysis of <b>Complexity Measures for
+                Reinforcement Learning (CM4RL)</b> that produce general, <i>computationally tractable</i> measurements of task
+                complexity for the problem of reinforcement learning.
+                Thus far, the field has primarily relied upon anecdotal assessments of complexity based on human intuitions and <i>viva
+                voce</i> of expert researchers fine-tuning algorithms to benchmarks as the most common tools to judge what problems are worth
+                solving.
+                Today, comparing evaluations among various environments with fundamentally different actions, states, rewards, and
+                dynamics is a seemingly intractable problem. Most prior work has sought to analyze algorithmic rather than task complexity in RL
+                in the form of sample complexity bounds [<a href="https://link.springer.com/article/10.1023/A:1017984413808">Kearns et al
+                (2002)</a>, <a href="https://jmlr.org/papers/volume10/strehl09a/strehl09a.pdf">Strehl et al (2009)</a>,
+                <a href="https://arxiv.org/abs/1510.08906">Dann et al (2015)</a>] or regret bounds [<a href="https://www.jmlr.org/papers/volume11/jaksch10a/jaksch10a.pdf">Jaksch et al, 2010</a>,
+                <a href="https://arxiv.org/abs/1703.05449">Azar et al (2017)</a>, <a href="https://arxiv.org/abs/1807.03765">Jin et
+                al (2018)</a> <a href="https://arxiv.org/abs/2101.02195">Jin et al (2021)</a>].
+                Other works have tackled the analysis of environments [<a href="https://arxiv.org/abs/1610.09512">Jiang et al (2017)</a>,
+                <a href="https://papers.nips.cc/paper/2014/hash/2ab56412b1163ee131e1246da0955bd1-Abstract.html">Maillard et al
+                (2014)</a>], focusing on structural properties of usually finite Markov Decision Processes and a priori knowledge
+                of these quantities.
+                We argue that much work remains to understand the interplay between the different factors that determine the
+                complexity of the reinforcement learning problem and develop actionable metrics that scale to high-dimensional problems
+                commonly seen in modern benchmarks, as some recent work [<a href="https://arxiv.org/abs/2004.07707">Oller et al (2020)</a>,
+                <a href="https://arxiv.org/pdf/2103.12726">Furuta et al (2021)</a>] have started exploring.
+            </p>
+            <p>
+                <ul>
+                    This workshop aims to bring together the theory and practice of analyzing task complexity in RL. We welcome research
+                    papers that investigate questions such as (but not limited to):
+                    <li>How hard is it to solve a task?</li>
+                    <li>How can we quantify/order tasks by their complexity?</li>
+                    <li>What are actionable metrics of complexity?</li>
+                    <li>Are current environments/benchmarks diverse/complex enough?</li>
+                    <li>How can we achieve task-agnostic intelligent behaviours?</li>
+                </ul>
+            </p>
+            <p>
+                We encourage submissions that propose computationally tractable approaches to these questions that are relevant to
+                areas including (but not limited to):
+                <ol>
+                    <li>Properties and taxonomies of MDPs</li>
+                    <li>PAC analysis of RL</li>
+                    <li>Information theory in RL</li>
+                    <li>RL benchmarks and their meta-analyses</li>
+                    <li>Skills Discovery</li>
+                    <li>Curriculum learning</li>
+                    <li>Continual learning</li>
+                    <li>Curiosity, intrinsic motivation and unsupervised RL</li>
+                    <li>Representation learning</li>
+                    <li>Exploration</li>
+                    <li>Human preferences</li>
+                    <li>Real-world applications of RL (Robotics, Recommendation, etc.)</li>
+                    <li>Novelty search, diversity algorithms, and open-endedness</li>
+                </ol>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="header-organizers">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#organizers" aria-expanded="false" aria-controls="organizers">
+            Organizers
+          </button>
+        </h2>
+        <div id="organizers" class="accordion-collapse collapse show" aria-labelledby="headingTwo" data-bs-parent="#content-accordion">
+          <div class="accordion-body">
+              <div class="card-group">
+                <div class="card mb-3" style="max-width: 540px;">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img src="..." alt="...">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title">Manfred Diaz</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card mb-3" style="max-width: 540px;">
+                  <div class="row g-0">
+                    <div class="col-md-4">
+                      <img src="..." alt="...">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title">Manfred Diaz</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="header-committee">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#committee" aria-expanded="false" aria-controls="committee">
+            Program Committee
+          </button>
+        </h2>
+        <div id="committee" class="accordion-collapse collapse show" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <table>
+                <tr>
+                    <td>Some people</td>
+                    <td>Aishwarya Agrawal</td>
+                    <td>Andrea Banino</td>
+                </tr>
+                <tr>
+                    <td>Andrew Jaegle</td>
+                    <td><a href="http://anselmrothe.github.io">Anselm Rothe</a></td>
+                    <td>Ari Holtzman</td>
+                </tr>
+                <tr>
+                    <td>Bas van Opheusden</td>
+                    <td>Ben Peloquin</td>
+                    <td>Bill Thompson</td>
+                </tr>
+                <tr>
+                    <td>Charlie Nash</td>
+                    <td>Danfei Xu</td>
+                    <td>Emin Orhan</td>
+                </tr>
+                <tr>
+                    <td><a href="http://stanford.edu/~ebiyik">Erdem Biyik</a></td>
+                    <td>Erin Grant</td>
+                    <td>Jon Gauthier</td>
+                </tr>
+                <tr>
+                    <td>Josh Merel</td>
+                    <td><a href="https://twitter.com/joshuacpeterson">Joshua Peterson</a></td>
+                    <td>Kelsey Allen</td>
+                </tr>
+                <tr>
+                    <td>Kevin Ellis</td>
+                    <td>Kevin McKee</td>
+                    <td>Kevin Smith</td>
+                </tr>
+                <tr>
+                    <td>Leila Wehbe</td>
+                    <td><a href="https://people.eecs.berkeley.edu/~lisa_anne/
+        ">Lisa Anne Hendricks</a></td>
+                    <td>Luis Piloto</td>
+                </tr>
+                <tr>
+                    <td>Mark Ho</td>
+                    <td><a href="https://www.people.hps.cam.ac.uk/index/teaching-officers/halina">Marta Halina</a></td>
+                    <td>Marta Kryven</td>
+                </tr>
+                <tr>
+                    <td>Matthew Overlan</td>
+                    <td>Max Kleiman-Weiner</td>
+                    <td><a href="http://maxwellforbes.com">Maxwell Forbes</a></td>
+                </tr>
+                <tr>
+                    <td>Maxwell Nye</td>
+                    <td><a href="http://mbchang.github.io/">Michael Chang</a></td>
+                    <td>Minae Kwon</td>
+                </tr>
+                <tr>
+                    <td>Pedro Tsividis</td>
+                    <td>Peter Battaglia</td>
+                    <td><a href="https://qiongzhang.github.io">Qiong Zhang</a></td>
+                </tr>
+                <tr>
+                    <td>Raphael Koster</td>
+                    <td>Richard Futrell</td>
+                    <td><a href="https://rxdhawkins.com">Robert Hawkins</a></td>
+                </tr>
+                <tr>
+                    <td>Sandy Huang</td>
+                    <td>Stephan Meylan</td>
+                    <td>Suraj Nair</td>
+                </tr>
+                <tr>
+                    <td>Tal Linzen</td>
+                    <td>Tina Zhu</td>
+                    <td><a href="https://www.waikeenvong.com/">Wai Keen Vong</a></td>
+                </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="heading-reference">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#references" aria-expanded="false" aria-controls="references">
+            References
+          </button>
+        </h2>
+        <div id="references" class="accordion-collapse collapse" aria-labelledby="reference" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <ul>
+                <li> Anderson, J. R. (1975). Computer simulation of a language acquisition system: A first report. In R. Solso
+                    (Ed.). Information processing and cognition. Hillsdale, N.J.: Lawrence Erlbaum.
+                </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
+
 </div>
 
-<div class="row" id="organizers">
-    <h2>Organizers</h2>
-    <div class="break"></div>
-    <ul>
-        <li><b><a href="#">Manfred Diaz</a></b> (Mila, University of Montreal)</li>
-        <li><b><a href="#">Hiroki Futura</a></b> (University of Tokyo)</li>
-        <li><b><a href="#">Shixiang Shane Gu</a></b> (Google Research, Brain Team)</li>
-        <li><b><a href="#">Pablo Samule Castro</a></b> (Google Research, Brain Team)</li>
-        <li><b><a href="#">Liam Paull</a></b> (Mila, University of Montreal)</li>
-        <li><b><a href="#">Simon Shaolei Du</a></b> ()</li>
-        <li><b><a href="#">Marc G. Bellmare</a></b> (Google Research, Brain Team)</li>
-    </ul>
-</div>
-
-<div class="row" id="pc">
-    <h2>Program Committee</h2>
-    <table>
-        <tr>
-            <td>Some people</td>
-            <td>Aishwarya Agrawal</td>
-            <td>Andrea Banino</td>
-        </tr>
-        <tr>
-            <td>Andrew Jaegle</td>
-            <td><a href="http://anselmrothe.github.io">Anselm Rothe</a></td>
-            <td>Ari Holtzman</td>
-        </tr>
-        <tr>
-            <td>Bas van Opheusden</td>
-            <td>Ben Peloquin</td>
-            <td>Bill Thompson</td>
-        </tr>
-        <tr>
-            <td>Charlie Nash</td>
-            <td>Danfei Xu</td>
-            <td>Emin Orhan</td>
-        </tr>
-        <tr>
-            <td><a href="http://stanford.edu/~ebiyik">Erdem Biyik</a></td>
-            <td>Erin Grant</td>
-            <td>Jon Gauthier</td>
-        </tr>
-        <tr>
-            <td>Josh Merel</td>
-            <td><a href="https://twitter.com/joshuacpeterson">Joshua Peterson</a></td>
-            <td>Kelsey Allen</td>
-        </tr>
-        <tr>
-            <td>Kevin Ellis</td>
-            <td>Kevin McKee</td>
-            <td>Kevin Smith</td>
-        </tr>
-        <tr>
-            <td>Leila Wehbe</td>
-            <td><a href="https://people.eecs.berkeley.edu/~lisa_anne/
-">Lisa Anne Hendricks</a></td>
-            <td>Luis Piloto</td>
-        </tr>
-        <tr>
-            <td>Mark Ho</td>
-            <td><a href="https://www.people.hps.cam.ac.uk/index/teaching-officers/halina">Marta Halina</a></td>
-            <td>Marta Kryven</td>
-        </tr>
-        <tr>
-            <td>Matthew Overlan</td>
-            <td>Max Kleiman-Weiner</td>
-            <td><a href="http://maxwellforbes.com">Maxwell Forbes</a></td>
-        </tr>
-        <tr>
-            <td>Maxwell Nye</td>
-            <td><a href="http://mbchang.github.io/">Michael Chang</a></td>
-            <td>Minae Kwon</td>
-        </tr>
-        <tr>
-            <td>Pedro Tsividis</td>
-            <td>Peter Battaglia</td>
-            <td><a href="https://qiongzhang.github.io">Qiong Zhang</a></td>
-        </tr>
-        <tr>
-            <td>Raphael Koster</td>
-            <td>Richard Futrell</td>
-            <td><a href="https://rxdhawkins.com">Robert Hawkins</a></td>
-        </tr>
-        <tr>
-            <td>Sandy Huang</td>
-            <td>Stephan Meylan</td>
-            <td>Suraj Nair</td>
-        </tr>
-        <tr>
-            <td>Tal Linzen</td>
-            <td>Tina Zhu</td>
-            <td><a href="https://www.waikeenvong.com/">Wai Keen Vong</a></td>
-        </tr>
-    </table>
-</div>
-
-<div class="row" id="references">
-    <h2>References</h2>
-    <ul>
-        <li> Anderson, J. R. (1975). Computer simulation of a language acquisition system: A first report. In R. Solso
-            (Ed.). Information processing and cognition. Hillsdale, N.J.: Lawrence Erlbaum.
-        </li>
-        <li> Banino, A., Barry, C., Uria, B., Blundell, C., Lillicrap, T., Mirowski, P., ... & Wayne, G. (2018).
-            Vector-based navigation using grid-like representations in artificial agents. Nature, 557(7705), 429.
-        </li>
-        <li> Bourgin, D., Peterson, J., Reichman, D., Griffiths, T., & Russell, S. (2019). Cognitive model priors for
-            predicting human decisions. In International Conference on Machine Learning (pp. 5133-5141).
-        </li>
-        <li> Dupoux, E. (2018). Cognitive science in the era of artificial intelligence: A roadmap for
-            reverse-engineering the infant language-learner. Cognition, 173, 43-59.
-        </li>
-        <li> Elman, J. L. (1990). Finding structure in time. Cognitive science, 14(2), 179-211.</li>
-        <li> Fan, J. E., Yamins, D. L., & Turk‐Browne, N. B. (2018). Common object representations for visual production
-            and recognition. Cognitive science, 42(8), 2670-2698.
-        </li>
-        <li> Gopnik, A. (2017). Making AI more human. Scientific American, 316(6), 60-65.</li>
-        <li> Hassabis, D., Kumaran, D., Summerfield, C., & Botvinick, M. (2017). Neuroscience-inspired artificial
-            intelligence. Neuron, 95(2), 245-258.
-        </li>
-        <li> Hamrick, J. (2019). Analogues of mental simulation and imagination in deep learning. Current Opinion in
-            Behavioral Sciences, 29, 8-16
-        </li>
-        <li> Lake, B. M., Ullman, T. D., Tenenbaum, J. B., & Gershman, S. J. (2017). Building machines that learn and
-            think like people. Behavioral and Brain Sciences, 40.
-        </li>
-        <li> Lieder, F., & Griffiths, T. L. (2017). Strategy selection as rational metareasoning. Psychological Review,
-            124(6), 762-794.
-        </li>
-        <li> Linzen, T., Dupoux, E., & Goldberg, Y. (2016). Assessing the ability of LSTMs to learn syntax-sensitive
-            dependencies. Transactions of the Association for Computational Linguistics, 4, 521-535.
-        </li>
-        <li> Nematzadeh, A., Burns, K., Grant, E., Gopnik, A., & Griffiths, T. (2018). Evaluating theory of mind in
-            question answering. EMNLP.
-        </li>
-        <li> Peterson, J., Battleday, R., Griffiths, T. L., & Russakovsky, O. (2019). Human uncertainty makes
-            classification more robust. Proceedings of the IEEE International Conference on Computer Vision.
-        </li>
-        <li> Rumelhart, D. E., McClelland, J. L., & PDP Research Group. (1986). Parallel distributed processing.</li>
-        <li> Tenenbaum, J. B., Griffiths, T. L., & Kemp, C. (2006). Theory-based Bayesian models of inductive learning
-            and reasoning. Trends in cognitive sciences, 10(7), 309-318.
-        </li>
-        <li> Yamins, D. L., & DiCarlo, J. J. (2016). Using goal-driven deep learning models to understand sensory
-            cortex. Nature neuroscience, 19(3), 356.
-        </li>
-    </ul>
-</div>
